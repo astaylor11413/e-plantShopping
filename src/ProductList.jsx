@@ -265,7 +265,7 @@ function ProductList({ onHomeClick }) {
                     removedKeys.forEach((key) => {
                         setAddedToCart((addedToCart) => {
                             ...addedToCart,
-                            addedToCart[key] = false;
+                            [key] : false,
                         });
                     });
                 }
