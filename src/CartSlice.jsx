@@ -7,21 +7,20 @@ export const CartSlice = createSlice({
   },
   reducers: {
     addItem: (state, action) => {
-        let i=0;
-        state.items.forEach((item)=>{
-            if(item.name===action.payload.name){
-                i = state.items.findIndex(item);
-            }
-        });
-        if(i!=0){
-            state.items[i].quantity++;
+        const {name, image, cost} = action.payload;
+        const foundItem = state.items.find(item=>item.name===name);
+        
+        if(foundItem){
+            
+            foundItem.quantity++;
         }else{
             state.items.push({
-                image: action.payload.image,
-                name: action.payload.name,
-                cost: action.payload.cost,
+                image: image,
+                name: name,
+                cost: cost,
                 quantity: 1,
             });
+            alert("Length of current items array:"+state.items.length);
         }
         
     },
