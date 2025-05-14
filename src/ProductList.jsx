@@ -311,7 +311,7 @@ function ProductList({ onHomeClick }) {
                                                  src={plant.image}
                                                 alt={plant.name} 
                                             />
-                                            <div className="product-cost">${plant.cost}</div> 
+                                            <div className="product-cost">{plant.cost}</div> 
                                             <div className="product-description">{plant.description}</div>
                                             <button className="product-button"
                                                         onClick={() => handleAddToCart(plant)}>
