@@ -252,6 +252,25 @@ function ProductList({ onHomeClick }) {
         e.preventDefault();
         setShowPlants(true); // Set showAboutUs to true when "About Us" link is clicked
         setShowCart(false); // Hide the cart when navigating to About Us
+        if(addedToCart.length >= 1){
+            const keysArray = Object.keys(addedToCart);
+            if(keysArray.length > cart.length){ //item was removed from cart
+                const removedKeys = keysArray.filter((key) => {
+                    key !== cart.forEach((item) => {
+                        item.name;
+                    });                             
+                });
+
+                if(removedKeys.length > 0){ //found no matches in the cart for some of the items in addedToCart list
+                    removedKeys.forEach((key) => {
+                        setAddedToCart((addedToCart) => {
+                            ...addedToCart,
+                            addedToCart[key] = false;
+                        });
+                    });
+                }
+            }
+        }
     };
 
     const handleContinueShopping = (e) => {
