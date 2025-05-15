@@ -20,7 +20,7 @@ export const CartSlice = createSlice({
                 cost: cost,
                 quantity: 1,
             });
-            alert("Length of current items array:"+state.items.length);
+            
         }
         
     },
