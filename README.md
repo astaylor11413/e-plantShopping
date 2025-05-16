@@ -1,2 +1,2 @@
 # coding-project-template
-Coded by Ashley Taylor-Leonard. Enjoy!
+Coded by Ashley T. Enjoy!
